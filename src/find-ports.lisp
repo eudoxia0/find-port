@@ -7,14 +7,13 @@
 
 (defun port-open-p (port)
   "Determine if the port is open."
-  (handler-bind
-      ((usocket:address-in-use-error
-         #'(lambda (condition)
-             (ignore condition)
-             nil)))
-    (let ((socket (usocket:socket-listen "127.0.0.1" port
-                                         :reuse-address t)))
-      (usocket:socket-close socket))))
+  (handler-case
+      (let ((socket (usocket:socket-listen "127.0.0.1" port
+                                           :reuse-address t)))
+        (usocket:socket-close socket))
+    (usocket:address-in-use-error (condition)
+      (declare (ignore condition))
+      nil)))
 
 (defun find-port (&key (min 49152) (max 65535))
   "Return the first available port in a range of port numbers."
