@@ -2,6 +2,26 @@
 
 Find open ports programmatically.
 
+# Overview
+
+```lisp
+CL-USER> (find-port:port-open-p 5000)
+T
+CL-USER> (my-clack-app:start)
+To load "clack-handler-hunchentoot":
+  Load 1 ASDF system:
+    clack-handler-hunchentoot
+; Loading "clack-handler-hunchentoot"
+
+Hunchentoot server is started.
+Listening on localhost:5000.
+T
+CL-USER> (find-port:port-open-p 5000)
+NIL
+CL-USER> (find-port:find-port)
+50123
+```
+
 # Usage
 
 The `port-open-p` function takes an integer and determines whether a port by
