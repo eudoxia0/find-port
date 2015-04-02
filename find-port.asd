@@ -1,4 +1,4 @@
-(defsystem find-ports
+(defsystem find-port
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :maintainer "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
@@ -10,9 +10,9 @@
   :components ((:module "src"
                 :serial t
                 :components
-                ((:file "find-ports"))))
+                ((:file "find-port"))))
   :description "Find open ports programmatically."
   :long-description
   #.(uiop:read-file-string
      (uiop:subpathname *load-pathname* "README.md"))
-  :in-order-to ((test-op (test-op find-ports-test))))
+  :in-order-to ((test-op (test-op find-port-test))))

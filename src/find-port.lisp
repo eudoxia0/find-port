@@ -1,9 +1,9 @@
 (in-package :cl-user)
-(defpackage find-ports
+(defpackage find-port
   (:use :cl)
   (:export :port-open-p
            :find-port))
-(in-package :find-ports)
+(in-package :find-port)
 
 (defun port-open-p (port)
   "Determine if the port is open."

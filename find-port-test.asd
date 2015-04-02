@@ -1,9 +1,9 @@
-(defsystem find-ports-test
+(defsystem find-port-test
   :author "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
-  :depends-on (:find-ports
+  :depends-on (:find-port
                :fiveam)
   :components ((:module "t"
                 :serial t
                 :components
-                ((:file "find-ports")))))
+                ((:file "find-port")))))
