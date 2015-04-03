@@ -22,7 +22,7 @@ script:
                    (declare (ignore c h))
                    (uiop:quit -1)))'
        -e '(coveralls:with-coveralls (:exclude (list "t"))
-             (ql:quickload :find-ports-test))'
+             (ql:quickload :find-port-test))'
 
 notifications:
   email:
