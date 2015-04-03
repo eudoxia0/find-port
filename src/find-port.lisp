@@ -15,7 +15,7 @@
       (declare (ignore condition))
       nil)))
 
-(defun find-port (&key (min 49152) (max 65535))
+(defun find-port (&key (min 40000) (max 50000))
   "Return the first available port in a range of port numbers."
   (loop for port from min to max until (port-open-p port)
         finally (return port)))
