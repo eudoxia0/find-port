@@ -1,6 +1,7 @@
 # find-port
 
 [![Build Status](https://travis-ci.org/eudoxia0/find-port.svg?branch=master)](https://travis-ci.org/eudoxia0/find-port)
+[![Quicklisp](http://quickdocs.org/badge/find-port.svg)](http://quickdocs.org/find-port/)
 
 Find open ports programmatically.
 
