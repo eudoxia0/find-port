@@ -20,5 +20,4 @@
 
 (defun find-port (&key (min 40000) (max 50000) (interface *default-interface*))
   "Return the first available port in a range of port numbers."
-  (loop for port from min to max until (port-open-p port :interface interface)
-        finally (return port)))
+  (loop :for port :from min :to max :when (port-open-p port :interface interface) :return port))
