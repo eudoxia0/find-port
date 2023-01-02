@@ -1,5 +1,6 @@
 # find-port
 
+![GitHub Actions build status badge.](https://github.com/eudoxia0/find-port/actions/workflows/test.yaml/badge.svg)
 [![Quicklisp](http://quickdocs.org/badge/find-port.svg)](http://quickdocs.org/find-port/)
 
 Find open ports programmatically.
